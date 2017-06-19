@@ -2,6 +2,6 @@
 
  target YFLLiveVideos do
  
-pod 'AFNETWorking'
+pod 'AFNetworking'
 
  end
