@@ -22,6 +22,8 @@
 		3AAB7DB61F041782002320A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB7DB51F041782002320A7 /* UIKit.framework */; };
 		3AAB7DB81F04178E002320A7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB7DB71F04178E002320A7 /* VideoToolbox.framework */; };
 		3AABBE611F05F12900ECE22A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AABBE601F05F12900ECE22A /* libc++.tbd */; };
+		3AABBE671F06209800ECE22A /* NETWorkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AABBE661F06209800ECE22A /* NETWorkEngine.m */; };
+		3AABBE6C1F0633CE00ECE22A /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AABBE6B1F0633CE00ECE22A /* ViewModel.m */; };
 		3ADA29CB1EF76D1600C5CF89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA29CA1EF76D1600C5CF89 /* main.m */; };
 		3ADA29CE1EF76D1600C5CF89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA29CD1EF76D1600C5CF89 /* AppDelegate.m */; };
 		3ADA29D11EF76D1600C5CF89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA29D01EF76D1600C5CF89 /* ViewController.m */; };
@@ -96,6 +98,10 @@
 		3AAB7DB51F041782002320A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AAB7DB71F04178E002320A7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		3AABBE601F05F12900ECE22A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3AABBE651F06209800ECE22A /* NETWorkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NETWorkEngine.h; sourceTree = "<group>"; };
+		3AABBE661F06209800ECE22A /* NETWorkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NETWorkEngine.m; sourceTree = "<group>"; };
+		3AABBE6A1F0633CE00ECE22A /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		3AABBE6B1F0633CE00ECE22A /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		3ADA29C61EF76D1600C5CF89 /* YFLLiveVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFLLiveVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADA29CA1EF76D1600C5CF89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3ADA29CC1EF76D1600C5CF89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,11 +202,15 @@
 				3ADA29CD1EF76D1600C5CF89 /* AppDelegate.m */,
 				3ADA29CF1EF76D1600C5CF89 /* ViewController.h */,
 				3ADA29D01EF76D1600C5CF89 /* ViewController.m */,
+				3AABBE6A1F0633CE00ECE22A /* ViewModel.h */,
+				3AABBE6B1F0633CE00ECE22A /* ViewModel.m */,
 				3ADA29D21EF76D1600C5CF89 /* Main.storyboard */,
 				3ADA29D51EF76D1600C5CF89 /* Assets.xcassets */,
 				3ADA29D71EF76D1600C5CF89 /* LaunchScreen.storyboard */,
 				3ADA29DA1EF76D1700C5CF89 /* Info.plist */,
 				3ADA29C91EF76D1600C5CF89 /* Supporting Files */,
+				3AABBE651F06209800ECE22A /* NETWorkEngine.h */,
+				3AABBE661F06209800ECE22A /* NETWorkEngine.m */,
 			);
 			path = YFLLiveVideos;
 			sourceTree = "<group>";
@@ -482,6 +492,8 @@
 			files = (
 				3ADA29D11EF76D1600C5CF89 /* ViewController.m in Sources */,
 				3ADA29CE1EF76D1600C5CF89 /* AppDelegate.m in Sources */,
+				3AABBE6C1F0633CE00ECE22A /* ViewModel.m in Sources */,
+				3AABBE671F06209800ECE22A /* NETWorkEngine.m in Sources */,
 				3ADA29CB1EF76D1600C5CF89 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
