@@ -9,19 +9,20 @@
 #import "ViewModel.h"
 
 @implementation ViewModel
-- (id)initWithDictionary:(NSDictionary *)dic
-{
+
+-(id)initWithDictionary:(NSDictionary *)dic{
     self = [super init];
     if (self) {
-        [self setValuesForKeysWithDictionary:dic];
+        self.city = [NSString stringWithFormat:@"%@",[dic objectForKey:@"city"]];
+        self.portrait = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"creator"] objectForKey:@"portrait"]];
+        self.name = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"creator"] objectForKey:@"nick"]];
+        self.online_users = [[dic objectForKey:@"online_users"] integerValue];
+        self.url = [NSString stringWithFormat:@"%@",dic[@"stream_addr"]];
     }
     return self;
 }
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key
-{
-    if ([key isEqualToString:@"id"]) {
-        self.ID = value;
-    }
-    
-}
+
+
+
+
 @end

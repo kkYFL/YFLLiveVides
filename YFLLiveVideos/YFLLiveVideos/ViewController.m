@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "NETWorkEngine.h"
 #import "ViewModel.h"
+#import "MJRefresh.h"
 
 
 #define randomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
@@ -28,6 +29,11 @@
 }
 
 -(void)initView{
+    __weak typeof(self) weakSelf = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadData];
+    }];
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
 }
 
@@ -46,6 +52,11 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
     }
     cell.backgroundColor = randomColor;
+    
+    if (self.dataArr.count > indexPath.row) {
+        ViewModel *tmpSourceModel = self.dataArr[indexPath.row];
+    }
+    //ViewModel
     return cell;
 }
 
@@ -73,23 +84,21 @@
 }
 
 -(void)loadData{
+    __weak typeof(self) weakSelf = self;
     [[NETWorkEngine shareNetEngine] getDataWithParams:nil Success:^(NSURLSessionDataTask *task, id responseObject) {
         if (responseObject) {
             NSArray *lives = [responseObject objectForKey:@"lives"];
-            if (self.dataArr.count) {
-                [self.dataArr removeAllObjects];
-            }
-            for (NSDictionary *dic in lives) {
-                ViewModel *viewModel = [[ViewModel alloc]init];
-                viewModel.city = dic[@"city"];
-                viewModel.portrait = dic[@"creator"][@"portrait"];
-                viewModel.name = dic[@"creator"][@"nick"];
-                viewModel.online_users = [dic[@"online_users"] intValue];
-                viewModel.url = dic[@"stream_addr"];
-                [self.dataArr addObject:viewModel];
+            if (weakSelf.dataArr.count) {
+                [weakSelf.dataArr removeAllObjects];
             }
             
-            [self.tableView reloadData];
+            for (NSDictionary *dic in lives) {
+                ViewModel *tmpModel = [[ViewModel alloc]initWithDictionary:dic];
+                [weakSelf.dataArr addObject:tmpModel];
+            }
+            
+            [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf.tableView reloadData];
         }
     } Failure:^(NSURLSessionDataTask *task, NSError *error) {
         
