@@ -21,6 +21,7 @@
 		3AAB7DB41F041778002320A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB7DB31F041778002320A7 /* QuartzCore.framework */; };
 		3AAB7DB61F041782002320A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB7DB51F041782002320A7 /* UIKit.framework */; };
 		3AAB7DB81F04178E002320A7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB7DB71F04178E002320A7 /* VideoToolbox.framework */; };
+		3AABBE611F05F12900ECE22A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AABBE601F05F12900ECE22A /* libc++.tbd */; };
 		3ADA29CB1EF76D1600C5CF89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA29CA1EF76D1600C5CF89 /* main.m */; };
 		3ADA29CE1EF76D1600C5CF89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA29CD1EF76D1600C5CF89 /* AppDelegate.m */; };
 		3ADA29D11EF76D1600C5CF89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA29D01EF76D1600C5CF89 /* ViewController.m */; };
@@ -94,6 +95,7 @@
 		3AAB7DB31F041778002320A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3AAB7DB51F041782002320A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AAB7DB71F04178E002320A7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		3AABBE601F05F12900ECE22A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3ADA29C61EF76D1600C5CF89 /* YFLLiveVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFLLiveVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADA29CA1EF76D1600C5CF89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3ADA29CC1EF76D1600C5CF89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AABBE611F05F12900ECE22A /* libc++.tbd in Frameworks */,
 				3AAB7DB81F04178E002320A7 /* VideoToolbox.framework in Frameworks */,
 				3AAB7DB61F041782002320A7 /* UIKit.framework in Frameworks */,
 				3AAB7DB41F041778002320A7 /* QuartzCore.framework in Frameworks */,
@@ -240,6 +243,7 @@
 		9667E771405D030E119F57D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AABBE601F05F12900ECE22A /* libc++.tbd */,
 				3AAB7DB71F04178E002320A7 /* VideoToolbox.framework */,
 				3AAB7DB51F041782002320A7 /* UIKit.framework */,
 				3AAB7DB31F041778002320A7 /* QuartzCore.framework */,
