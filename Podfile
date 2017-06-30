@@ -6,4 +6,10 @@
 
  pod 'AFNetworking'
 
+ pod 'Masonry'
+
+ pod 'MJRefresh'
+
+ pod 'SDWebImage', '~>3.8'
+
  end
