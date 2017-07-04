@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A6493171F0B8177004533B3 /* YFLLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6493161F0B8177004533B3 /* YFLLiveViewController.m */; };
+		3A64931C1F0B967B004533B3 /* MainNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A64931B1F0B967B004533B3 /* MainNavgationController.m */; };
 		3AAB7D9E1F0416E0002320A7 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB7D971F041685002320A7 /* IJKMediaFramework.framework */; };
 		3AAB7DA01F0416EF002320A7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB7D9F1F0416EF002320A7 /* AudioToolbox.framework */; };
 		3AAB7DA21F0416FB002320A7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB7DA11F0416FB002320A7 /* AVFoundation.framework */; };
@@ -83,6 +85,10 @@
 /* Begin PBXFileReference section */
 		19FF2B310FEA880FF6C2168A /* libPods-YFLLiveVideos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YFLLiveVideos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B85A03519EED5CF8246C00 /* Pods-YFLLiveVideos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YFLLiveVideos.release.xcconfig"; path = "../Pods/Target Support Files/Pods-YFLLiveVideos/Pods-YFLLiveVideos.release.xcconfig"; sourceTree = "<group>"; };
+		3A6493151F0B8177004533B3 /* YFLLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFLLiveViewController.h; sourceTree = "<group>"; };
+		3A6493161F0B8177004533B3 /* YFLLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFLLiveViewController.m; sourceTree = "<group>"; };
+		3A64931A1F0B967B004533B3 /* MainNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavgationController.h; sourceTree = "<group>"; };
+		3A64931B1F0B967B004533B3 /* MainNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavgationController.m; sourceTree = "<group>"; };
 		3AAB7D901F041685002320A7 /* IJKMediaPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IJKMediaPlayer.xcodeproj; path = "../../../Desktop/ijkplayer-ios/ijkplayer/ios/IJKMediaPlayer/IJKMediaPlayer.xcodeproj"; sourceTree = "<group>"; };
 		3AAB7D9F1F0416EF002320A7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3AAB7DA11F0416FB002320A7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -204,6 +210,8 @@
 				3ADA29D01EF76D1600C5CF89 /* ViewController.m */,
 				3AABBE6A1F0633CE00ECE22A /* ViewModel.h */,
 				3AABBE6B1F0633CE00ECE22A /* ViewModel.m */,
+				3A6493151F0B8177004533B3 /* YFLLiveViewController.h */,
+				3A6493161F0B8177004533B3 /* YFLLiveViewController.m */,
 				3ADA29D21EF76D1600C5CF89 /* Main.storyboard */,
 				3ADA29D51EF76D1600C5CF89 /* Assets.xcassets */,
 				3ADA29D71EF76D1600C5CF89 /* LaunchScreen.storyboard */,
@@ -211,6 +219,8 @@
 				3ADA29C91EF76D1600C5CF89 /* Supporting Files */,
 				3AABBE651F06209800ECE22A /* NETWorkEngine.h */,
 				3AABBE661F06209800ECE22A /* NETWorkEngine.m */,
+				3A64931A1F0B967B004533B3 /* MainNavgationController.h */,
+				3A64931B1F0B967B004533B3 /* MainNavgationController.m */,
 			);
 			path = YFLLiveVideos;
 			sourceTree = "<group>";
@@ -492,9 +502,11 @@
 			files = (
 				3ADA29D11EF76D1600C5CF89 /* ViewController.m in Sources */,
 				3ADA29CE1EF76D1600C5CF89 /* AppDelegate.m in Sources */,
+				3A6493171F0B8177004533B3 /* YFLLiveViewController.m in Sources */,
 				3AABBE6C1F0633CE00ECE22A /* ViewModel.m in Sources */,
 				3AABBE671F06209800ECE22A /* NETWorkEngine.m in Sources */,
 				3ADA29CB1EF76D1600C5CF89 /* main.m in Sources */,
+				3A64931C1F0B967B004533B3 /* MainNavgationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

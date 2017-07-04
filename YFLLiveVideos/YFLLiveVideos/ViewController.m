@@ -10,6 +10,7 @@
 #import "NETWorkEngine.h"
 #import "ViewModel.h"
 #import "MJRefresh.h"
+#import "YFLLiveViewController.h"
 
 
 #define randomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
@@ -29,6 +30,9 @@
 }
 
 -(void)initView{
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"LiveVideo";
+    
     __weak typeof(self) weakSelf = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadData];
@@ -53,12 +57,19 @@
     }
     cell.backgroundColor = randomColor;
     
-    if (self.dataArr.count > indexPath.row) {
-        ViewModel *tmpSourceModel = self.dataArr[indexPath.row];
-    }
+
     //ViewModel
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.dataArr.count > indexPath.row) {
+        ViewModel *tmpSourceModel = self.dataArr[indexPath.row];
+        YFLLiveViewController *liveController = [[YFLLiveViewController alloc]init];
+        liveController.urlStr = tmpSourceModel.url;
+        [self.navigationController pushViewController:liveController animated:YES];
+    }
+}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
