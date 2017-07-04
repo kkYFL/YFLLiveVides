@@ -32,11 +32,26 @@
 -(void)initView{
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"LiveVideo";
+    self.tableView.backgroundColor = [UIColor colorWithRed:202/255.0 green:225/255.0 blue:255/255.0 alpha:1];
+    
+    
+    int i = 0;
+    for(NSString *fontfamilyname in [UIFont familyNames])
+    {
+        NSLog(@"family:'%@'",fontfamilyname);
+        for(NSString *fontName in [UIFont fontNamesForFamilyName:fontfamilyname])
+        {
+            NSLog(@"\tfont:'%@'",fontName);
+        }
+        NSLog(@"-------------%d",i++);
+    }
+    
     
     __weak typeof(self) weakSelf = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadData];
     }];
+    
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
 }
@@ -55,10 +70,23 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
     }
-    cell.backgroundColor = randomColor;
     
+    
+    UIFontDescriptor *attributeFontDescriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:
+                                                 @{UIFontDescriptorFamilyAttribute: @"Marion",
+                                                   UIFontDescriptorNameAttribute:@"Marion-Regular",
+                                                   UIFontDescriptorSizeAttribute: @40.0,
+                                                   UIFontDescriptorMatrixAttribute:[NSValue valueWithCGAffineTransform:CGAffineTransformMakeRotation(M_1_PI*1.5)
+                                                                                    ]}];
+    
+    
+    cell.textLabel.font = [UIFont fontWithName:@"Verdana" size:20];
+    //cell.textLabel.font = [UIFont fontWithDescriptor:attributeFontDescriptor size:0.0];
+    cell.textLabel.textColor = randomColor;
+    cell.textLabel.text = [NSString stringWithFormat:@"Live Show%ld",(long)indexPath.row];
+    cell.backgroundColor = [UIColor colorWithRed:211/255.0 green:211/255.0 blue:211/255.0 alpha:1];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-    //ViewModel
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

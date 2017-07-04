@@ -36,7 +36,6 @@
     _player = [[IJKFFMoviePlayerController alloc] initWithContentURL:self.url withOptions:nil];
     _PlayerView = [_player view];
     _PlayerView.bounds = CGRectMake(0, 64, ScreenW, ScreenH-64);
-    //_PlayerView.bounds = CGRectMake(([[UIScreen mainScreen]bounds].size.width-200)/2.0, ([[UIScreen mainScreen]bounds].size.height-64-150)/2.0,200, 150);
     [self.view addSubview:_PlayerView];
     
 }
